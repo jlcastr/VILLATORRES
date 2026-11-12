@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa de Torres — Taxco · Plata y Oro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital@1&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Versión v=9 para invalidar la caché en todos los navegadores -->
+<link rel="stylesheet" href="style.css?v=9">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <span class="brand-name">Villa de Torres</span>
+        <span class="brand-sub">Taxco · Plata y Oro</span>
+    </div>
+    <nav class="mainnav">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#taller">El taller</a>
+        <a href="#visitanos">Visítanos</a>
+    </nav>
+    <a href="#pedidos" class="btn btn-dark btn-small">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Pedidos
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+</header>
+
+<section class="hero">
+    <div class="hero-media">
+        <img src="img/principal.jpg" alt="Villa de Torres — Platería en Taxco">
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+        <p class="eyebrow">Taxco de Alarcón, Guerrero</p>
+        <h1 class="hero-title">Plata que se trabaja<br><em>a golpe de martillo</em></h1>
+        <p class="hero-text">
+            Catálogo de anillos, collares, pulseras, aretes, brazaletes, arracadas, dijes
+            y accesorios en plata .925 y oro 10k. Elige tu pieza y escríbenos: cada pedido se
+            confirma directo con el taller.
+        </p>
+        <div class="hero-actions">
+            <a href="#catalogo" class="btn btn-gold">Ver el catálogo</a>
+            <a href="#visitanos" class="btn btn-outline-light">Cómo llegar</a>
+        </div>
+    </div>
+</section>
+
+<div class="ticker">
+    <div class="ticker-track">
+        <span>Plata .925</span><span class="dot">◆</span>
+        <span>Oro 10k</span><span class="dot">◆</span>
+        <span>Hecho en Taxco</span><span class="dot">◆</span>
+        <span>Filigrana</span><span class="dot">◆</span>
+        <span>Repujado</span><span class="dot">◆</span>
+        <span>Piezas únicas</span><span class="dot">◆</span>
+        <span>Plata .925</span><span class="dot">◆</span>
+        <span>Oro 10k</span><span class="dot">◆</span>
+        <span>Hecho en Taxco</span><span class="dot">◆</span>
+        <span>Filigrana</span><span class="dot">◆</span>
+        <span>Repujado</span><span class="dot">◆</span>
+        <span>Piezas únicas</span><span class="dot">◆</span>
+    </div>
+</div>
+
+<section class="catalogo" id="catalogo">
+    <p class="eyebrow center" id="catalogo-eyebrow">Catálogo Virtual</p>
+
+    
+        <h2 class="section-title center" id="catalogo-titulo">Plateria</h2>
+        <p class="section-lead center" id="catalogo-desc">
+            villa de torres
+        </p>
+    
+
+    <!-- Barra de Filtro de Categorías -->
+    <div class="catalogo-cta">
+        <button class="btn btn-dark filter-all active" data-category="todos">Todo el catálogo</button>
+        <div class="filter-buttons-bar" id="filters-container">
+            
+                
+                    <button class="filter-btn" data-category="cat-4">Anillos categoria</button>
+                
+                    <button class="filter-btn" data-category="cat-5">Cadenas</button>
+                
+                    <button class="filter-btn" data-category="cat-6">Dijes</button>
+                
+            
+        </div>
+    </div>
+
+    <!-- Categorías Principales (Vista Inicial) -->
+    <div class="category-grid" id="category-grid">
+        
+            
+                <article class="category-card" data-category="cat-4">
+                    <div class="category-media">
+                        
+                            <img src="img/anillo.jpg" alt="Anillos categoria">
+                        
+                    </div>
+                    <h3 class="category-title">Anillos categoria</h3>
+                </article>
+            
+                <article class="category-card" data-category="cat-5">
+                    <div class="category-media">
+                        
+                            <img src="img/cadena.jpg" alt="Cadenas">
+                        
+                    </div>
+                    <h3 class="category-title">Cadenas</h3>
+                </article>
+            
+                <article class="category-card" data-category="cat-6">
+                    <div class="category-media">
+                        
+                            <img src="img/dije.jpeg" alt="Dijes">
+                        
+                    </div>
+                    <h3 class="category-title">Dijes</h3>
+                </article>
+            
+        
+    </div>
+
+    <!-- Wrapper para la Segunda Sección (Grid Compacto + Paginador Numerado) -->
+    <div class="product-section-wrapper" id="product-section-wrapper">
+        <div class="product-grid" id="product-grid"></div>
+
+        <!-- Controles de Paginación de 20 en 20 -->
+        <div class="pagination-container" id="pagination-container" style="display: none;">
+            <button class="pagination-btn" id="pg-prev" aria-label="Página anterior">&laquo; Anterior</button>
+            <div class="pagination-numbers" id="pg-numbers"></div>
+            <button class="pagination-btn" id="pg-next" aria-label="Página siguiente">Siguiente &raquo;</button>
+        </div>
+    </div>
+</section>
+
+<section class="taller" id="taller">
+    <div class="taller-media">
+        <img src="img/taller.jpg" alt="Artesano trabajando la plata">
+    </div>
+    <div class="taller-content">
+        <p class="eyebrow">El taller</p>
+        <h2 class="section-title">Tres generaciones de plateros<br>en el mismo barrio</h2>
+        <p class="section-text">
+            Fundimos, laminamos y calamos aquí mismo, a unas calles de Santa Prisca.
+            Trabajamos plata ley .925 y oro de 10k y 18k, con piedras de la región
+            como turquesa, obsidiana y ópalo.
+        </p>
+        <hr class="rule">
+        <div class="stat-grid">
+            <div class="stat">
+                <p class="stat-title">Desde 1968</p>
+                <p class="stat-sub">Taller familiar</p>
+            </div>
+            <div class="stat">
+                <p class="stat-title">Plata .925</p>
+                <p class="stat-sub">Ley garantizada</p>
+            </div>
+            <div class="stat">
+                <p class="stat-title">Oro 10k · 18k</p>
+                <p class="stat-sub">Bajo pedido</p>
+            </div>
+            <div class="stat">
+                <p class="stat-title">Diseño a medida</p>
+                <p class="stat-sub">Grabado y tallas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pasos">
+    <p class="eyebrow center">Cómo pedir</p>
+    <h2 class="section-title center">Tres pasos, sin carrito</h2>
+    <div class="steps-grid">
+        <div class="step">
+            <hr class="rule">
+            <span class="step-num">01</span>
+            <p class="step-title">Elige tu pieza</p>
+            <p class="step-text">Guarda el código del producto (por ejemplo AN-104).</p>
+        </div>
+        <div class="step">
+            <hr class="rule">
+            <span class="step-num">02</span>
+            <p class="step-title">Escríbenos</p>
+            <p class="step-text">Por WhatsApp, teléfono o correo. Te confirmamos precio del día, talla y disponibilidad.</p>
+        </div>
+        <div class="step">
+            <hr class="rule">
+            <span class="step-num">03</span>
+            <p class="step-title">Recibe o recoge</p>
+            <p class="step-text">Envíos a toda la República por paquetería asegurada, o pasa por la tienda en el centro de Taxco.</p>
+        </div>
+    </div>
+</section>
+
+<section class="visitanos" id="visitanos">
+    <div class="visitanos-banner">
+        <img src="img/taxco.jpg" alt="Vista panorámica de Taxco">
+    </div>
+    <div class="visitanos-panel">
+        <div class="visitanos-info">
+            <p class="eyebrow">Visítanos</p>
+            <h2 class="section-title">En el centro de Taxco, a media cuadra<br>de Santa Prisca</h2>
+
+            <ul class="info-list">
+                <li>
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    <span>Calle Ejemplo 12, Local 3, Centro<br>39400 Taxco de Alarcón, Guerrero, México</span>
+                </li>
+                <li>
+                    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                    <span>Lunes a sábado 10:00–20:00 · Domingo 11:00–17:00</span>
+                </li>
+                <li>
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
+                    <span>762 120 2937</span>
+                </li>
+                <li>
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
+                    <span>villadetorres@ejemplo.mx</span>
+                </li>
+                <li>
+                    <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+                    <span>@tuinstagram</span>
+                </li>
+            </ul>
+
+            <div class="visitanos-actions">
+                <a href="https://wa.me/527621202937" target="_blank" class="btn btn-dark" id="pedidos">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    WhatsApp
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Taxco+de+Alarc%C3%B3n+Centro" target="_blank" class="btn btn-outline-dark">Abrir en mapas</a>
+            </div>
+        </div>
+        <div class="visitanos-map">
+            <iframe
+                src="https://www.google.com/maps?q=Taxco+de+Alarc%C3%B3n,+Guerrero&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <span class="brand-name">Villa de Torres</span>
+            <span class="brand-sub">Taxco · Plata y Oro</span>
+            <p class="footer-text">
+                Joyería artesanal elaborada en plata ley .925 y oro. Piezas únicas trabajadas a mano en el corazón de Taxco de Alarcón.
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3 class="footer-title">Navegación</h3>
+            <ul class="footer-links">
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#taller">El taller</a></li>
+                <li><a href="#visitanos">Visítanos</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3 class="footer-title">Contacto</h3>
+            <ul class="footer-links">
+                <li><a href="https://wa.me/527621202937" target="_blank">WhatsApp Directo</a></li>
+                <li><a href="tel:7621202937">762 120 2937</a></li>
+                <li><a href="mailto:villadetorres@ejemplo.mx">Correo electrónico</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3 class="footer-title">Ubicación</h3>
+            <ul class="footer-links">
+                <li><span>Centro Histórico</span></li>
+                <li><span>39400 Taxco, Gro.</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; Villa de Torres. Todos los derechos reservados.</p>
+        <p>Taxco de Alarcón, Guerrero, México</p>
+    </div>
+</footer>
+
+<!-- Modal Bottom Sheet -->
+<div class="product-modal" id="product-modal" aria-hidden="true">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-sheet">
+        <div class="sheet-drag-handle"></div>
+        <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
+        
+        <div class="modal-body">
+            <div class="modal-gallery">
+                <div class="gallery-track" id="gallery-track"></div>
+                <div class="gallery-dots" id="gallery-dots"></div>
+            </div>
+
+            <div class="modal-info">
+                <p class="modal-eyebrow" id="modal-eyebrow">Plata .925 · Hecho a mano</p>
+                <h2 class="modal-title" id="modal-title">Dije de Corazón</h2>
+                <p class="modal-price" id="modal-price">$340.00 MXN</p>
+                <p class="modal-desc" id="modal-desc">
+                    Variantes disponibles con incrustaciones de piedras naturales. Selecciona tu modelo favorito y confirma disponibilidad por WhatsApp.
+                </p>
+                
+                <a href="#" target="_blank" class="btn btn-dark modal-cta" id="modal-whatsapp">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
